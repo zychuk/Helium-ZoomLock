@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Lock Zoom",
+  "version": "1.0",
+  "description": "Locks browser zoom at 100% by blocking keyboard and mouse wheel zooming.",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
