@@ -1,12 +1,15 @@
 {
   "manifest_version": 3,
   "name": "Lock Zoom",
-  "version": "1.0",
-  "description": "Locks browser zoom at 100% by blocking keyboard and mouse wheel zooming.",
+  "version": "1.1",
+  "description": "Locks browser zoom by blocking keyboard and mouse wheel zooming. Zoom via the browser's UI buttons still works.",
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content.js"]
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_origin_as_fallback": true
     }
   ]
 }
